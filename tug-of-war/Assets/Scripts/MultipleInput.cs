@@ -13,19 +13,15 @@ public class MultipleInput : MonoBehaviour
         public KeyCode right;
     }
 
+    public TopDownMovement motor;
+
     public Controls player_1;
     public Controls player_2;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(get_direction(player_1) + get_direction(player_2));
+        motor.move(get_direction(player_1) + get_direction(player_2));
     }
 
     Vector2 get_direction(Controls c)
