@@ -24,6 +24,8 @@ public class MultipleInput : MonoBehaviour
         motor.move(get_direction(player_1) + get_direction(player_2));
     }
 
+    
+
     Vector2 get_direction(Controls c)
     {
         int x = System.Convert.ToInt32(Input.GetKey(c.right)) - System.Convert.ToInt32(Input.GetKey(c.left));
